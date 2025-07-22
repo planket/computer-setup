@@ -1,0 +1,18 @@
+[legacy/profiles:]
+default='b1dcc9dd-5262-4d8d-a863-c897e6d979b9'
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9']
+
+[legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+background-color='rgb(0,0,0)'
+bold-color='rgb(14,115,161)'
+bold-color-same-as-fg=false
+cursor-blink-mode='on'
+cursor-shape='block'
+font='Nimbus Mono PS 12'
+foreground-color='rgb(0,255,0)'
+highlight-background-color='rgb(140,135,135)'
+highlight-colors-set=true
+highlight-foreground-color='rgb(22,18,18)'
+use-system-font=false
+use-theme-colors=false
+visible-name='greenblack'
