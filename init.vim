@@ -6,12 +6,13 @@
 set noswapfile
 
 "basic appearance
-set list
+"set list
+"set listchars=tab:>- "show tabs with marker
 set lcs=tab:»·     "show tabs
-set lcs+=trail:·   "show trailing spaces
-set lcs+=extends:# "show line wrap
-set lcs+=nbsp:.    "show non breaking spaces
-set lcs+=space:·
+"set lcs+=trail:·   "show trailing spaces
+"set lcs+=extends:# "show line wrap
+"set lcs+=nbsp:.    "show non breaking spaces
+"set lcs+=space:·
 
 set showmatch               " show matching 
 set ignorecase              " case insensitive 
@@ -39,6 +40,7 @@ Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 "Enable syntax highlighting
