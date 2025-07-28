@@ -6,13 +6,14 @@
 set noswapfile
 
 "basic appearance
-"set list
-"set listchars=tab:>- "show tabs with marker
-set lcs=tab:»·     "show tabs
-"set lcs+=trail:·   "show trailing spaces
+set list
+"set listchars=tab:>- "show tabs with marker  
+"set lcs=tab:»·     "show tabs
+"set lcs=trail:·   "show trailing spaces
 "set lcs+=extends:# "show line wrap
 "set lcs+=nbsp:.    "show non breaking spaces
-"set lcs+=space:·
+
+
 
 set showmatch               " show matching 
 set ignorecase              " case insensitive 
@@ -33,6 +34,8 @@ syntax on                   " syntax highlighting
 set mouse=a                 " enable mouse click
 set clipboard=unnamedplus   " using system clipboard
 
+
+
 "plugins
 call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
@@ -41,10 +44,30 @@ Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'Yggdroot/indentLine'
 call plug#end()
+
+" IndentLine settings (using Yggdroot/indentLine)
+let g:indentLine_char = '│'
+let g:indentLine_color_term = 15 
+let g:indentLine_color_gui = '#93a1a1'
+let g:indentLine_conceallevel = 2
+
+" keybindings
+" CoC keybindings
+" Use Tab and Shift-Tab to navigate completion list
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Use Enter to confirm completion
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
+
+
 
 "Enable syntax highlighting
 syntax enable
+
+
 
 "Set color scheme 
 set termguicolors
@@ -54,6 +77,9 @@ colorscheme solarized
 highlight Normal guibg=#002b36 ctermbg=0
 highlight SpecialKey ctermfg=white guifg=white
 highlight NonText ctermfg=white guifg=white
+highlight String ctermfg=yellow guifg=#b58900
+highlight LineNr ctermfg=yellow guifg=#b58900
+highlight ColorColumn ctermbg=0 guibg=#073642
 
 "nerdtree settings
 " Start NERDTree and put the cursor back in the other window.
