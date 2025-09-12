@@ -89,8 +89,11 @@ fi
 
 # some more ls aliases
 alias ll='ls -alF'
-alias la='ls -A'
+#alias la='ls -A'
 alias l='ls -CF'
+alias la='eza --group-directories-first -l'
+alias lt='eza -T -l 2'
+alias lg='eza -l --git'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -117,5 +120,4 @@ if ! shopt -oq posix; then
 fi
 
 alias wake-neils='wakeonlan A8:5E:45:51:A9:E4'
-alias startfreq='sudo cpupower frequency-set -u 800mhz'
-export PATH=/usr/lib/snap:/usr/include/stlink:/usr/include:$PATH
+alias wake-marie='wakeonlan 60:84:7C:DA:80'
