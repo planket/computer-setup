@@ -127,3 +127,5 @@ alias z='zoxide'
 alias la='eza --group-directories-first -l'
 alias lt='eza -T -l 2'
 alias lg='eza -l --git'
+
+eval "$(zoxide init zsh)"
