@@ -121,3 +121,9 @@ alias qmodbus='/home/josh/Code/qmodbus/build/qmodbus'
 
 alias wake-neils='wakeonlan A8:5E:45:51:A9:E4'
 alias wake-marie='wakeonlan 60:CF:84:7C:DA:80'
+
+alias z='zoxide'
+
+alias la='eza --group-directories-first -l'
+alias lt='eza -T -l 2'
+alias lg='eza -l --git'
