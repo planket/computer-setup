@@ -5,9 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export ANTHROPIC_API_KEY="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"
-# or for OpenAI:
-export OPENAI_API_KEY="your-api-key-here"
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
