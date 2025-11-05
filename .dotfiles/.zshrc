@@ -5,12 +5,15 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export ANTHROPIC_API_KEY="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"
+# or for OpenAI:
+export OPENAI_API_KEY="your-api-key-here"
+
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -80,6 +83,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+export TERMINAL=kitty
 
 # User configuration
 
@@ -122,7 +126,7 @@ alias qmodbus='/home/josh/Code/qmodbus/build/qmodbus'
 alias wake-neils='wakeonlan A8:5E:45:51:A9:E4'
 alias wake-marie='wakeonlan 60:CF:84:7C:DA:80'
 
-alias z='zoxide'
+#alias z='zoxide'
 
 alias la='eza --group-directories-first -l'
 alias lt='eza -T -l 2'
